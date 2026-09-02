@@ -1,0 +1,9 @@
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# local scratch (never ship)
+_*.js
+_*.html
+_*.json

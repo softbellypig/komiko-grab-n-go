@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Komiko Grab-n-Go — downloading</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap dl">
+    <div class="brand">
+      <div class="mark">🐷</div>
+      <div>
+        <h1>Komiko Grab-n-Go</h1>
+        <p class="sub">Saving your images…</p>
+      </div>
+    </div>
+
+    <div id="running" class="card">
+      <p class="big" id="headline">Downloading…</p>
+      <div class="bar"><div id="barFill"></div></div>
+      <p class="stat">Saved <b id="savedNum">0</b> of <b id="totalNum">0</b><span id="failedWrap" class="hidden"> · <b id="failedNum">0</b> couldn't be saved</span></p>
+
+      <div class="snack">
+        <span class="emoji">🍪</span><b>Please keep this window open</b> and let it run.
+        Go have a snack, stretch, get some fresh air — when you come back, your files will be right here:
+        <span class="path" id="pathRunning">Downloads</span>
+      </div>
+
+      <div class="btn-row" style="margin-top:12px">
+        <button id="openBtn" class="btn btn-ghost" disabled>📁 Open folder</button>
+        <button id="stopBtn" class="btn btn-ghost">Stop</button>
+      </div>
+    </div>
+
+    <div id="finished" class="card done hidden">
+      <p class="big" id="doneHeadline">All done! ✨</p>
+      <p class="stat" id="doneStat"></p>
+      <span class="path" id="pathDone">Downloads</span>
+      <div class="btn-row" style="margin-top:14px">
+        <button id="openBtnDone" class="btn btn-go">📁 Open folder</button>
+        <button id="closeBtn" class="btn btn-ghost">Close</button>
+      </div>
+      <p id="failList" class="note hidden"></p>
+    </div>
+
+    <div id="empty" class="card hidden">
+      <p class="big">Nothing to download</p>
+      <p class="stat">Open Komiko, click the Komiko Grab-n-Go icon, and use <b>Scan all images</b> first.</p>
+    </div>
+
+    <p class="credit">made by <b>softbellypig</b> 🐷</p>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="queue.js"></script>
+  <script src="downloader.js"></script>
+</body>
+</html>

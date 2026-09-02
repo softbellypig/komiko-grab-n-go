@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Komiko Grab-n-Go</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="popup">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">🐷</div>
+      <div>
+        <h1>Komiko Grab-n-Go</h1>
+        <p class="sub">Save all your generations in two clicks</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <ul class="steps">
+        <li><span class="n">1</span><span>On Komiko, scroll your generations <b>all the way to the bottom</b> so every image has loaded.</span></li>
+        <li><span class="n">2</span><span>Click <b>Scan all images</b>.</span></li>
+      </ul>
+      <button id="scanBtn" class="btn btn-primary">🔍 Scan all images</button>
+      <p id="scanNote" class="note hidden"></p>
+    </div>
+
+    <div id="results" class="card hidden">
+      <p class="count"><span id="countNum">0</span> <small>images found</small></p>
+      <div id="grid" class="grid"></div>
+      <button id="downloadBtn" class="btn btn-go">⬇️ Download all</button>
+      <p class="note">They'll be saved to a folder named with today's date and time.</p>
+    </div>
+
+    <p class="credit">made by <b>softbellypig</b> 🐷</p>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="scan.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

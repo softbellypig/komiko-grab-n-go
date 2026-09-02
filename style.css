@@ -1,0 +1,134 @@
+/* Komiko Grab-n-Go — one cozy light theme */
+:root {
+  --bg: #fff7ef;
+  --card: #ffffff;
+  --ink: #3a2e2a;
+  --muted: #8f7d75;
+  --line: #f1e3d8;
+  --accent: #ff8b6a;        /* warm peach — primary actions */
+  --accent-ink: #4a1f12;
+  --accent-2: #2bb3a0;      /* teal — success / progress */
+  --danger: #e5684f;
+  --radius: 14px;
+  --radius-sm: 9px;
+  --shadow: 0 6px 24px rgba(74, 31, 18, 0.10);
+  --font: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.wrap { padding: 16px; }
+.popup { width: 380px; }
+
+.brand {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+}
+.brand .mark {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: var(--accent); display: grid; place-items: center;
+  font-size: 18px; box-shadow: var(--shadow);
+}
+.brand h1 { font-size: 17px; margin: 0; letter-spacing: 0.2px; }
+.brand .sub { font-size: 11.5px; color: var(--muted); margin: 0; }
+
+.card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow);
+}
+.card + .card { margin-top: 12px; }
+
+.steps { margin: 0 0 12px; padding: 0; list-style: none; }
+.steps li {
+  display: flex; gap: 10px; align-items: flex-start;
+  font-size: 13px; color: var(--ink); margin-bottom: 8px;
+}
+.steps .n {
+  flex: 0 0 22px; height: 22px; border-radius: 50%;
+  background: var(--line); color: var(--accent-ink);
+  font-weight: 800; font-size: 12px; display: grid; place-items: center;
+}
+
+.btn {
+  width: 100%; border: none; border-radius: var(--radius-sm);
+  padding: 12px 14px; font: inherit; font-weight: 800; font-size: 14px;
+  cursor: pointer; transition: transform .08s ease, filter .15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .55; cursor: default; }
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover:not(:disabled) { filter: brightness(1.04); }
+.btn-go { background: var(--accent-2); color: #fff; }
+.btn-ghost {
+  background: transparent; color: var(--muted);
+  border: 1px solid var(--line); font-weight: 700;
+}
+.btn-row { display: flex; gap: 8px; }
+.btn-row .btn { width: auto; flex: 1; }
+
+.note {
+  margin: 10px 0 0; font-size: 12.5px; color: var(--muted);
+}
+.note.err { color: var(--danger); font-weight: 700; }
+
+.count {
+  font-size: 22px; font-weight: 900; margin: 0 0 2px;
+}
+.count small { font-size: 12px; font-weight: 700; color: var(--muted); }
+
+.grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px;
+  max-height: 210px; overflow-y: auto; margin: 10px 0 12px;
+  padding: 4px; background: var(--bg); border-radius: var(--radius-sm);
+}
+.grid img {
+  width: 100%; aspect-ratio: 1; object-fit: cover;
+  border-radius: 6px; background: var(--line); display: block;
+}
+.grid-more {
+  grid-column: 1 / -1; text-align: center; font-size: 11.5px;
+  color: var(--muted); padding: 4px 0;
+}
+
+/* ---- downloader window ---- */
+.dl { width: 100%; max-width: 560px; margin: 0 auto; }
+.big { font-size: 20px; font-weight: 900; margin: 0 0 6px; }
+.bar {
+  height: 14px; background: var(--line); border-radius: 999px; overflow: hidden;
+  margin: 12px 0 8px;
+}
+.bar > div {
+  height: 100%; width: 0%; background: var(--accent-2);
+  border-radius: 999px; transition: width .35s ease;
+}
+.stat { font-size: 13px; color: var(--muted); margin: 0; }
+.stat b { color: var(--ink); }
+
+.snack {
+  margin-top: 12px; padding: 12px 14px; border-radius: var(--radius-sm);
+  background: #fff1e6; border: 1px dashed #ffc9b3; font-size: 13.5px;
+}
+.snack .emoji { font-size: 20px; margin-right: 6px; }
+.path {
+  display: block; margin-top: 8px; font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 12.5px; background: #fff; border: 1px solid var(--line);
+  border-radius: 8px; padding: 8px 10px; word-break: break-all;
+}
+
+.done { text-align: center; padding: 8px 0 2px; }
+.done .big { font-size: 24px; }
+
+.credit {
+  margin: 14px 0 0; text-align: center;
+  font-size: 11.5px; color: var(--muted); letter-spacing: 0.2px;
+}
+.credit b { color: var(--accent-ink); font-weight: 800; }
+
+.hidden { display: none !important; }
